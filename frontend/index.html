@@ -228,6 +228,7 @@
         resultBox.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Calculating estimated price...`;
 
         // Simulate API call with setTimeout
+
         setTimeout(() => {
             // Dummy calculation logic (replace with your actual ML model prediction)
             // Price = (Income * 5) + (Avg Area House Age * 30000) + (Avg Number of Rooms * 100000)
@@ -236,7 +237,7 @@
             const formattedPrice = estimatedPrice.toLocaleString('en-IN', {
                 maximumFractionDigits: 0
             });
-
+            
             resultBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> Estimated Price: ₹ ${formattedPrice}`;
         }, 1500); // 1.5 seconds delay for effect
     });
