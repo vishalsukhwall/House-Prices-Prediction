@@ -38,11 +38,15 @@ document.getElementById('predictBtn').addEventListener('click', async () => {
         } else {
             resultDiv.innerText = `Error: ${data.error}`;
         }
+
     } catch (error) {
         console.error('Network Error:', error);
         resultDiv.style.backgroundColor = '#fff5f5';
         resultDiv.style.color = '#c53030';
         resultDiv.style.border = '1px solid #fed7d7';
+
+
+        
         resultDiv.innerText = 'Error: Unable to connect to your local Python server.';
     }
 });
