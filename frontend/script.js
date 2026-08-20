@@ -10,7 +10,7 @@ document.getElementById('predictBtn').addEventListener('click', async () => {
         return;
     }
 
-    // 2. Set UI to Loading status
+    // 2.  Set UI to Loading status
     resultDiv.style.display = 'block';
     resultDiv.style.backgroundColor = '#edf2f7';
     resultDiv.style.color = '#4a5568';

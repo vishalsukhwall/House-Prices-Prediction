@@ -15,6 +15,7 @@ df = pd.read_csv("USA_Housing.csv")
 X = df[['Avg. Area Income', 'Avg. Area House Age', 'Avg. Area Number of Rooms', 'Area Population']] 
 y = df['Price']
 
+
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 scaler = StandardScaler()
