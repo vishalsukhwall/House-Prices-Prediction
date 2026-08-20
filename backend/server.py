@@ -27,6 +27,7 @@ def predict():
 
     data = request.get_json()
     
+    
     try:
         income = float(data.get('income'))
         house_age = float(data.get('house_age'))
@@ -48,7 +49,7 @@ def predict():
         # 3. Process prediction
         predicted_price = model.predict(scaled_features)[0]
         
-        # Dataset True Minimum Absolute Floor Value Limit
+        # Dataset True Minimum Absolute Floor Value Limit  
         DATASET_MIN_PRICE = 20000.0
         if predicted_price < DATASET_MIN_PRICE:
             predicted_price = DATASET_MIN_PRICE
@@ -56,7 +57,9 @@ def predict():
         return jsonify({
             'estimated_price': f"${predicted_price:,.2f}"
         })
-        
+
+
+    
     except (ValueError, TypeError):
         return jsonify({'error': 'Invalid matrix payload properties'}), 400
 
